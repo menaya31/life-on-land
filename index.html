@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Life on Land</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body{
+            
+            background-image: url(https://static.vecteezy.com/system/resources/previews/026/716/386/large_2x/illustration-image-nature-and-sustainability-eco-friendly-living-and-conservation-concept-art-of-earth-and-animal-life-in-different-environments-generative-ai-illustration-free-photo.jpg);
+            background-size: contain; 
+            background-repeat: no-repeat;
+            background-position: center top;
+            background-color: rgb(209, 209, 185);
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 0;
+            padding: 0;
+
+        }
+        
+        li{
+            list-style: none;
+            
+        }
+        a{
+            text-decoration: none;
+            color: #ffffff;
+            font-size: 15px;
+            padding: 0 30px;
+            font-weight: bold;
+        }
+        .links a:hover{
+            background: rgba(0,0,0,0.7);
+            border-radius: 0px;
+            padding: 26px;
+            
+            
+        }
+        header{
+            margin-top: 0%;
+            padding:2px;
+            width: 100%;
+        }
+        .navbar{
+            width: 100%;
+            height: 85px;
+            margin: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: fixed;
+            box-sizing: border-box;
+            background: rgba(90, 87, 87, 0.6);
+            border-bottom: 2px solid #fff;
+        }
+        .navbar.scrolled{
+            background-color: rgb(72, 75, 72);
+        }
+        .navbar .links{
+            display: flex;
+            gap: 2rem ;
+        }
+        .profile-icon i{
+            font-size: 25px;
+            color: white;
+            padding-left: 120px;
+        }
+        .search{
+            position: relative;
+        }
+        .search input{
+            padding-left: 10px;
+            width: 120px;
+            border-radius: 4px;
+        }
+        .search i{
+            position: absolute; 
+            right: 5px; 
+            top: 50%; 
+            transform: translateY(-50%);
+        }
+        
+        
+        h1{
+            padding: 10px;
+            text-align: center;
+            background-color:rgb(82, 170, 82);
+            font-size: 50px;
+            margin-top: 400px;
+        }
+        .para1{
+            font-size: 30px;
+            text-align: center;
+            padding-left: 12px;
+            padding-right: 12px;
+            background-color: white;
+            padding: 30px;
+        }
+        .para2{
+            text-align: center;
+            background-color: white;
+            float: left;
+            margin-bottom: 30px;
+        }
+        .main{
+            width: 100%;
+            background-color: white;
+            margin-top: 30px auto ;
+            display: flex;
+            flex-direction: column;
+            align-items: center; 
+            padding: 20px;
+            box-sizing: border-box;
+            
+        }
+        .font{
+            font-size: 20px;
+        }
+        .para3{
+            text-align: center;
+            background-color: white;
+        }
+        
+        img{
+            float: left;
+        }
+        h2{
+            margin-top: 30px;
+        }
+        
+        .targets{
+            width: 70%;
+            margin-top: 25px;
+            background-image: url(images/target-background.png)
+            
+        }
+        .timages{
+           vertical-align: middle;
+           margin-right: 60px;
+           margin-left: 25px;
+           margin-top: 10px;
+          
+        }
+        .text{
+            display: inline-block;
+            vertical-align: middle;
+        }
+        .targets h3{
+            display: inline;
+            margin: 0;
+        }
+        h2{
+            display: inline;
+            margin: 0;
+        }
+        footer{
+            background-color: rgb(100, 100, 86);
+            padding-top: 50px;
+            margin-top: 400px;
+        }
+        .container{
+            width: 1200px;
+            margin: auto;
+            display: flex;
+            
+            
+        }
+        .footer-contact{
+            text-align: center;
+        }
+        .footer-content{
+            width: 20%;
+        }
+        .footer-contact p{
+            color: white;
+        }
+        .footer-content h3{
+            font-size: 20px;
+            text-align: center;
+            margin-bottom: 15px;
+        }
+        .footer-content p{
+            width: 200px;
+            margin: auto;
+            padding: 7px;
+        }
+        .footer-content ul{
+            text-align: center;
+        }
+        .list{
+            padding: 0;
+        }
+        .list li{
+            list-style: none;
+            width: auto;
+            text-align: center;
+            padding: 7px;
+            position: relative;
+        }
+        .list li::before{
+            content: '';
+            position: absolute;
+            transform: translate(-50%,-50%);
+            left: 50%;
+            top: 100%;
+            width: 0;
+            height: 2px;
+            background: rgb(60, 204, 60);
+            transition-duration: .5s;
+
+        }
+        .list li:hover::before{
+            width: 70px;
+        }
+        .social-icons{
+            text-align: center;
+            padding: 0;
+        
+        }
+        .social-icons li{
+            display: list-item;
+            text-align: center;
+            padding: 5px;
+
+        }
+        .social-icons i{
+            color: white;
+            font-size: 25px;
+            
+        }
+        .social-icons i:hover{
+            color: rgb(60, 204, 60);
+            
+        }
+        .underline:hover{
+            color:rgb(60, 204, 60)
+        }
+        .bottom-bar{
+            background-color: black;
+            text-align: center;
+            padding: 15px 0;
+            margin-top: 50px;
+        }
+        .bottom-bar p{
+            color: #fff;
+            margin: 0;
+            font-size: 15px;
+            padding: 7px;
+        }
+        .footer-img{
+            
+            padding-right: 300px;
+            width: 300px;
+            height: 150px;
+        }
+        
+
+        
+
+        
+
+    </style>
+</head>
+<body>
+    <header>
+    
+    <div class="navbar">
+        <ul class="links">
+        
+        <li><a class="active" href="home">HOME ></a></li>
+        <li><a href="contents">CONTENTS > </a></li>
+        <li><a href="gallery">GALLERY ></a></li>
+        <li><a href="feedback">FEEDBACK ></a></li>
+        <li><a href="about us">ABOUT US ></a></li>
+        </ul>
+        <div class="profile-icon"><a href="signup.html"><i class="fa-regular fa-user"></i></a></div>
+        <div class="search"><input type="text" placeholder="search"><i class="fa-solid fa-magnifying-glass"></i> </div>
+
+    </div>
+    </header>
+
+    <h1>Life on Land</h1>
+    <p class="para1">Protect, restore and promote sustainable use of terrestrial ecosystems, sustainably manage forests, combat desertification, and halt and reverse land degradation and halt biodiversity loss.</p>
+    
+    <section class="para2">
+        <h2>Our Misson</h2>
+        <p class="font">A flourishing life on land is the foundation for our life on this planet.We are all part of the planet’s ecosystem and we have caused severe damage to it through deforestation, loss of natural habitats and land degradation. Promoting a sustainable use of our ecosystems and preserving biodiversity is not a cause. It is the key to our own survival.</p>
+       </section>
+    
+    
+    <main class="main">
+    
+    
+     <section class="para3">
+        <h2>The Targets</h2>
+        <p class="font">Everyone can help to make sure that we meet the Global Goals. Use these twelve targets to create action to protect and restore life on land.</p>
+    </section>
+    
+
+    <section class="targets">
+    <p><img class="timages" src="images/target1.svg"> <span class="text"><h3>CONSERVE AND RESTORE TERRESTRIAL AND FRESHWATER ECOSYSTEMS</h3> <br>By 2020, ensure the conservation, restoration and sustainable use of terrestrial and inland freshwater ecosystems and their services, in particular forests, wetlands, mountains and drylands, in line with obligations under international agreements.</span></p>
+    
+    <p><img class="timages" src="images/target2.svg"><span class="text"><h3>END DEFORESTATION AND RESTORE DEGRADED FORESTS</h3><br>By 2020, promote the implementation of sustainable management of all types of forests, halt deforestation, restore degraded forests and substantially increase afforestation and reforestation globally.</span></p>
+    
+    <p><img class="timages" src="images/target3.svg"><span class="text"><h3>END DESERTIFICATION AND RESTORE DEGRADED LAND</h3><br>By 2030, combat desertification, restore degraded land and soil, including land affected by desertification, drought and floods, and strive to achieve a land degradation-neutral world.</span></p>
+    
+    <p><img class="timages" src="images/target4.svg"><span class="text"><h3>ENSURE CONSERVATION OF MOUNTAIN ECOSYSTEMS</h3><br>By 2030, ensure the conservation of mountain ecosystems, including their biodiversity, in order to enhance their capacity to provide benefits that are essential for sustainable development.</span></p>
+
+    <p><img class="timages" src="images/target5.svg"><span class="text"><h3>PROTECT BIODIVERSITY AND NATURAL HABITATS</h3><br>Take urgent and significant action to reduce the degradation of natural habitats, halt the loss of biodiversity and, by 2020, protect and prevent the extinction of threatened species.</span></p>
+    
+    <p><img class="timages" src="images/target6.svg"><span class="text"><h3>PROMOTE ACCESS TO GENETIC RESOURCES AND FAIR SHARING OF THE BENEFITS</h3><br>Promote fair and equitable sharing of the benefits arising from the utilization of genetic resources and promote appropriate access to such resources, as internationally agreed.</span></p>
+    
+    <p><img class="timages" src="images/target7.svg"><span class="text"><h3>ELIMINATE POACHING AND TRAFFICKING OF PROTECTED SPECIES</h3><br>Take urgent action to end poaching and trafficking of protected species of flora and fauna and address both demand and supply of illegal wildlife products.</span></p>
+    
+    <P><img class="timages" src="images/target8.svg"><span class="text"><h3>PREVENT INVASIVE ALIEN SPECIES ON LAND AND IN WATER ECOSYSTEMS</h3><br>By 2020, introduce measures to prevent the introduction and significantly reduce the impact of invasive alien species on land and water ecosystems and control or eradicate the priority species.</span></P>
+    
+    <p><img class="timages" src="images/target9.svg"><span class="text"><h3>INTEGRATE ECOSYSTEM AND BIODIVERSITY IN GOVERNMENTAL PLANNING</h3><br>>By 2020, integrate ecosystem and biodiversity values into national and local planning, development processes, poverty reduction strategies and accounts.</span></p>
+    
+    <p><img class="timages" src="images/target10.svg"><span class="text"><h3>INCREASE FINANCIAL RESOURCES TO CONSERVE AND SUSTAINABLY USE ECOSYSTEM AND BIODIVERSITY</h3><br>Mobilize and significantly increase financial resources from all sources to conserve and sustainably use biodiversity and ecosystems.</span></p>
+    
+    <p><img class="timages" src="images/target11.svg"><span class="text"><h3>FINANCE AND INCENTIVIZE SUSTAINABLE FOREST MANAGEMENT</h3><br>Mobilize significant resources from all sources and at all levels to finance sustainable forest management and provide adequate incentives to developing countries to advance such management, including for conservation and reforestation.</span></p>
+    
+    <p><img class="timages" src="images/target12.svg"><span class="text"><h3>COMBAT GLOBAL POACHING AND TRAFFICKING</h3><br>Enhance global support for efforts to combat poaching and trafficking of protected species, including by increasing the capacity of local communities to pursue sustainable livelihood opportunities.</span></p>
+
+</section>
+</main>
+
+<footer>
+    
+    <div class="container">
+
+        
+            <img  class="footer-img" src="https://www.globalgoals.org/static/images/logo-eba30efeb6af50ec06b4590bac56770b.svg">
+        
+
+        <div class="footer-content">
+            <div class="footer-contact">
+            <h3>Contact Us</h3>
+            <p>Email:<span class="underline">team@project-everyone.org </span></p>
+            <p>Phone:<span class="underline">+122 68098 237890 </span></p>
+            <p>Address: <span class="underline">23/Castle Street,Califonia</span></p>
+            </div>
+        </div>
+        <div class="footer-content">
+            
+            <ul class="list">
+                <h3>Navigation</h3>
+                <li><a href="#contents">CONTENTS </a></li>
+                <li><a href="gallery">GALLERY </a></li>
+                <li><a href="feedback">FEEDBACK </a></li>
+                <li><a href="about us">ABOUT US </a></li>
+            </ul>
+        </div>
+        <div class="footer-content">
+            <h3>Follow Us</h3>
+            <ul class="social-icons">
+            <li><a href="#"><i class="fab fa-facebook"></i></a></li>
+            <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+            <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+            <li><a href="#"><i class="fab fa-youtube"></i></a></li>
+            </ul>
+        </div>
+
+    </div>
+    <div class="bottom-bar">
+        <p>&copy; 2024 The Global Goal Projects:All rights reserved</p>
+    </div>
+</footer>
+<script>
+    window.addEventListener('scroll', function() {
+        const navbar = document.querySelector('.navbar');
+        if (window.scrollY > 200) {
+            navbar.classList.add('scrolled');
+        } else {
+            navbar.classList.remove('scrolled');
+        }
+    });
+</script>
+</body>
+
+</html>
