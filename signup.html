@@ -4,17 +4,85 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sign Up</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
     <style>
         body{
-            background-color:rgb(55, 110, 55) ;
+            background-color:rgb(49, 97, 49) ;
             font-family: Arial, Helvetica, sans-serif;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
+            
+        }
+        li{
+            list-style: none;
+            
+        }
+        a{
+            text-decoration: none;
+            color: #ffffff;
+            font-size: 15px;
+            padding: 0 30px;
+            font-weight: bold;
+        }
+        .links a:hover{
+            background: rgba(0,0,0,0.7);
+            border-radius: 0px;
+            padding: 26px;
+            
+            
+        }
+        header{
+            margin-top: 0%;
+            padding:2px;
+            width: 100%;
+        }
+        .navbar{
+            width: 100%;
+            height: 85px;
             margin: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: fixed;
+            box-sizing: border-box;
+            background: rgba(90, 87, 87, 0.6);
+            border-bottom: 2px solid #fff;
+        }
+        .navbar.scrolled{
+            background-color: rgb(72, 75, 72);
+        }
+        .navbar .links{
+            display: flex;
+            gap: 2rem ;
+        }
+        .profile-icon i{
+            font-size: 25px;
+            color: white;
+            padding-left: 120px;
+        }
+        .profile-icon i:hover{
+            color: black;
+        }
+        .search{
+            position: relative;
+        }
+        .search input{
+            border:none;
+            padding-left: 10px;
+            width: 120px;
+            border-radius: 4px;
+        }
+        .search i{
+            position: absolute; 
+            right: 5px; 
+            top: 50%; 
+            transform: translateY(-50%);
+        }
+        main{
+            margin-top: 150px;
         }
         #box{
+            
+            margin:0 auto;
             background-image: url(https://static8.depositphotos.com/1497380/1035/v/450/depositphotos_10350872-stock-illustration-leaves-background.jpg);
             text-align: center;
             width: 30%;
@@ -51,9 +119,140 @@
         
             font-size: 12px;
         }
+        .p1 a{
+            color:rgb(47, 185, 65);
+            font-size: 10px;
+        }
+        .p2 a{
+            color:rgb(47, 185, 65);
+            font-size: 12px;
+        }
+
+        footer{
+            background-color: rgb(100, 100, 86);
+            padding-top: 50px;
+            margin-top: 300px;
+        }
+        .container{
+            width: 1200px;
+            margin: auto;
+            display: flex;
+            
+            
+        }
+        .footer-contact{
+            text-align: center;
+        }
+        .footer-content{
+            width: 20%;
+        }
+        .footer-contact p{
+            color: white;
+        }
+        .footer-content h3{
+            font-size: 20px;
+            text-align: center;
+            margin-bottom: 15px;
+        }
+        .footer-content p{
+            width: 200px;
+            margin: auto;
+            padding: 7px;
+        }
+        .footer-content ul{
+            text-align: center;
+        }
+        .list{
+            padding: 0;
+        }
+        .list li{
+            list-style: none;
+            width: auto;
+            text-align: center;
+            padding: 7px;
+            position: relative;
+        }
+        .list li::before{
+            content: '';
+            position: absolute;
+            transform: translate(-50%,-50%);
+            left: 50%;
+            top: 100%;
+            width: 0;
+            height: 2px;
+            background: rgb(60, 204, 60);
+            transition-duration: .5s;
+
+        }
+        .list li:hover::before{
+            width: 70px;
+        }
+        .social-icons{
+            text-align: center;
+            padding: 0;
+        
+        }
+        .social-icons li{
+            display: list-item;
+            text-align: center;
+            padding: 5px;
+
+        }
+        .social-icons i{
+            color: white;
+            font-size: 25px;
+            
+        }
+        .social-icons i:hover{
+            color: rgb(60, 204, 60);
+            
+        }
+        .underline:hover{
+            color:rgb(60, 204, 60)
+        }
+        .bottom-bar{
+            background-color: black;
+            text-align: center;
+            padding: 15px 0;
+            margin-top: 50px;
+        }
+        .bottom-bar p{
+            color: #fff;
+            margin: 0;
+            font-size: 15px;
+            padding: 7px;
+        }
+        .footer-img{
+            
+            padding-right: 300px;
+            width: 300px;
+            height: 150px;
+        }
+        
+
+        
     </style>
 </head>
 <body>
+    <header>
+    
+        <div class="navbar">
+            <ul class="links">
+            
+            <li><a class="active" href="index.html">HOME ></a></li>
+            <li><a href="contents">CONTENTS > </a></li>
+            <li><a href="gallery">GALLERY ></a></li>
+            <li><a href="feedback.html">FEEDBACK ></a></li>
+            <li><a href="about us">ABOUT US ></a></li>
+            </ul>
+            <div class="profile-icon"><a href="signup.html"><i class="fa-regular fa-user"></i></a></div>
+            <div class="search"><input type="text" placeholder="search"><i class="fa-solid fa-magnifying-glass"></i> </div>
+    
+        </div>
+        </header>
+    
+    <main>
+    
     <form id="box">
 
         <h1>Join Us Today</h1>
@@ -72,6 +271,58 @@
         <P class="p2">Already have an account <a href="login.html">Login Here</a></P>
     
     </form>
+ </main> 
+ 
+ <footer>
     
+    <div class="container">
+
+        
+            <img  class="footer-img" src="https://www.globalgoals.org/static/images/logo-eba30efeb6af50ec06b4590bac56770b.svg">
+        
+
+        <div class="footer-content">
+            <div class="footer-contact">
+            <h3>Contact Us</h3>
+            <p>Email:<span class="underline">team@project-everyone.org </span></p>
+            <p>Phone:<span class="underline">+122 68098 237890 </span></p>
+            <p>Address: <span class="underline">23/Castle Street,Califonia</span></p>
+            </div>
+        </div>
+        <div class="footer-content">
+            
+            <ul class="list">
+                <h3>Navigation</h3>
+                <li><a href="#contents">CONTENTS </a></li>
+                <li><a href="gallery">GALLERY </a></li>
+                <li><a href="feedback">FEEDBACK </a></li>
+                <li><a href="about us">ABOUT US </a></li>
+            </ul>
+        </div>
+        <div class="footer-content">
+            <h3>Follow Us</h3>
+            <ul class="social-icons">
+            <li><a href="#"><i class="fab fa-facebook"></i></a></li>
+            <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+            <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+            <li><a href="#"><i class="fab fa-youtube"></i></a></li>
+            </ul>
+        </div>
+
+    </div>
+    <div class="bottom-bar">
+        <p>&copy; 2024 The Global Goal Projects:All rights reserved</p>
+    </div>
+</footer>
+<script>
+    window.addEventListener('scroll', function() {
+        const navbar = document.querySelector('.navbar');
+        if (window.scrollY > 200) {
+            navbar.classList.add('scrolled');
+        } else {
+            navbar.classList.remove('scrolled');
+        }
+    });
+</script>
 </body>
 </html>
